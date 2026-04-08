@@ -12,7 +12,7 @@ It performs the following cleanup steps for a selected customer:
    `C:\Users\koudouva\Documents\clocks-resources`
 2. Prompts for a customer name, then works inside:
    `C:\Users\koudouva\Documents\clocks-resources\<customer-name>`
-3. Deletes `controller\config\clocksettings.conf` if it exists
+3. Deletes `controller\config\clockSetting.conf` if it exists
 4. Processes `controller\data\0001\export`
 5. Processes `controller\data\0001\import`
 
@@ -30,7 +30,7 @@ For each folder inside `export` and `import`, the script:
 └── <customer-name>
     └── controller
         ├── config
-        │   └── clocksettings.conf
+        │   └── clockSetting.conf
         └── data
             └── 0001
                 ├── export
@@ -64,3 +64,4 @@ python sanitize_prod_backup.py CustomerName
 This section should be updated for each new request or change made to the script.
 
 - 2026-04-08 14:10:58 -04:00: Added `README.md` with script overview, usage instructions, folder structure, and update log section.
+- 2026-04-08 14:22:23 -04:00: Updated the cleanup target from `clocksettings.conf` to `clockSetting.conf` in the script and documentation.

@@ -175,8 +175,8 @@ def main() -> int:
         raise SystemExit(f"Customer directory not found: {home_dir}")
 
     # Step 3:
-    # Go to controller\config and remove clocksettings.conf if it exists.
-    clocksettings_path = controller_dir / "config" / "clocksettings.conf"
+    # Go to controller\config and remove clockSetting.conf if it exists.
+    clocksettings_path = controller_dir / "config" / "clockSetting.conf"
     clocksettings_deleted = delete_if_exists(clocksettings_path)
 
     # Steps 4 and 5:
@@ -197,7 +197,7 @@ def main() -> int:
     # Print a readable summary so the person running the script can confirm
     # what happened without opening every folder manually.
     print(f"Customer directory: {home_dir}")
-    print(f"Deleted clocksettings.conf: {'yes' if clocksettings_deleted else 'no'}")
+    print(f"Deleted clockSetting.conf: {'yes' if clocksettings_deleted else 'no'}")
     print(
         "Export cleanup: "
         f"{export_lastrun_deleted} lastrun deleted, "
